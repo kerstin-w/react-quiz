@@ -24,6 +24,17 @@ const initialState = {
   secondsRemaining: null,
 };
 
+/**
+ * The reducer function handles different actions and updates the state accordingly in a JavaScript
+ * application.
+ * @param state - The `state` parameter represents the current state of the application. It is an
+ * object that contains various properties such as `questions`, `status`, `secondsRemaining`, `answer`,
+ * `points`, `index`, and `highscore`.
+ * @param action - The `action` parameter is an object that represents the action being dispatched. It
+ * has a `type` property that indicates the type of action being performed, and a `payload` property
+ * that contains any additional data associated with the action.
+ * @returns The reducer function returns a new state object based on the action type and payload.
+ */
 function reducer(state, action) {
   switch (action.type) {
     case "dataReceived":
@@ -84,6 +95,14 @@ function reducer(state, action) {
   }
 }
 
+/**
+ * The `App` function is the main component of a quiz application that manages the state and rendering
+ * of different screens based on the current status of the quiz.
+ * @returns The `App` component is returning a JSX structure that represents the user interface of the
+ * application. It includes a `div` element with the class name "app" as the root element. Inside the
+ * `div`, there is a `Header` component, a `Main` component, and different components rendered based on
+ * the value of the `status` variable.
+ */
 export default function App() {
   const [
     { questions, status, index, answer, points, highscore, secondsRemaining },
