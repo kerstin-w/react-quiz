@@ -117,7 +117,7 @@ question. The initial value of the accumulator is set to 0. */
     0
   );
   useEffect(function () {
-    fetch("http://localhost:8000/questions")
+    fetch("https://my-json-server.typicode.com/kerstin-w/react-quiz/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataFailed" }));
