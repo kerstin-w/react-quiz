@@ -5,7 +5,7 @@
  * paragraphs. The first paragraph displays the emoji, the user's score, and the percentage of the
  * score out of the maximum possible points. The second paragraph displays the highscore.
  */
-function FinishScreen({ points, maxPossiblePoints, highscore }) {
+function FinishScreen({ dispatch, points, maxPossiblePoints, highscore }) {
   const percentage = (points / maxPossiblePoints) * 100;
 
   let emoji;
@@ -22,6 +22,12 @@ function FinishScreen({ points, maxPossiblePoints, highscore }) {
         {maxPossiblePoints} ({Math.ceil(percentage)}%)
       </p>
       <p className="highscore">(Highscore: {highscore} points)</p>
+      <button
+        className="btn btn-ui"
+        onClick={() => dispatch({ type: "restart" })}
+      >
+        Restart quiz
+      </button>
     </>
   );
 }
