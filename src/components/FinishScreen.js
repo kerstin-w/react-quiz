@@ -1,9 +1,8 @@
 /**
- * The FinishScreen function displays the user's score, percentage, and highscore using emojis and
- * text.
- * @returns The FinishScreen component is returning JSX elements. Specifically, it returns two
- * paragraphs. The first paragraph displays the emoji, the user's score, and the percentage of the
- * score out of the maximum possible points. The second paragraph displays the highscore.
+ * The `FinishScreen` function displays the user's score, percentage, highscore, and a button to
+ * restart the quiz.
+ * @returns JSX elements, including a paragraph displaying the user's score, a paragraph displaying the
+ * highscore, and a button to restart the quiz.
  */
 function FinishScreen({ dispatch, points, maxPossiblePoints, highscore }) {
   const percentage = (points / maxPossiblePoints) * 100;
