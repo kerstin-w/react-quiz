@@ -6,10 +6,10 @@
  * is set to the JSON string representation of the "questions" array from the "./data/questions.json"
  * file.
  */
-export default async function handler() {
+exports.handler = async (event, context) => {
   const questions = require("./data/questions.json");
   return {
     statusCode: 200,
     body: JSON.stringify(questions),
   };
-}
+};
