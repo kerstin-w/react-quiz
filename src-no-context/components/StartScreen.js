@@ -1,12 +1,9 @@
-import { useQuiz } from "../contexts/QuizContext";
-
 /**
  * The StartScreen function is a React component that displays a welcome message and the number of
  * questions in a quiz, and includes a button to start the quiz.
  * @returns The StartScreen component is returning a JSX element.
  */
-function StartScreen() {
-  const { numQuestions, dispatch } = useQuiz();
+function StartScreen({ numQuestions, dispatch }) {
   return (
     <div className="start">
       <h2>Welcome to The React Quiz!</h2>

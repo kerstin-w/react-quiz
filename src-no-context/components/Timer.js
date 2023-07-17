@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { useQuiz } from "../contexts/QuizContext";
 
 /**
  * The Timer function is a React component that displays a countdown timer and updates the timer every
@@ -8,8 +7,7 @@ import { useQuiz } from "../contexts/QuizContext";
  * it displays the minutes and seconds remaining in the format "mm:ss". If the minutes or seconds are
  * less than 10, a leading "0" is added to the display.
  */
-function Timer() {
-  const { dispatch, secondsRemaining } = useQuiz();
+function Timer({ dispatch, secondsRemaining }) {
   const mins = Math.floor(secondsRemaining / 60);
   const secs = secondsRemaining % 60;
 

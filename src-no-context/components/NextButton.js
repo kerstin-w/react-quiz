@@ -1,5 +1,3 @@
-import { useQuiz } from "../contexts/QuizContext";
-
 /**
  * The NextButton function returns a button component based on the current question index and the
  * number of total questions.
@@ -7,8 +5,7 @@ import { useQuiz } from "../contexts/QuizContext";
  * null. If the index is less than the number of questions minus 1, it returns a "Next" button. If the
  * index is equal to the number of questions minus 1, it returns a "Finish" button.
  */
-function NextButton() {
-  const { dispatch, answer, index, numQuestions } = useQuiz();
+function NextButton({ dispatch, answer, index, numQuestions }) {
   if (answer === null) return null;
   if (index < numQuestions - 1)
     return (

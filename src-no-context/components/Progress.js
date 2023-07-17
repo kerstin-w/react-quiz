@@ -1,5 +1,3 @@
-import { useQuiz } from "../contexts/QuizContext";
-
 /**
  * The Progress function is a React component that displays the progress of a quiz or questionnaire,
  * including the current question number, the total number of questions, and the points earned out of
@@ -8,8 +6,7 @@ import { useQuiz } from "../contexts/QuizContext";
  * question number out of the total number of questions, and the current points out of the maximum
  * possible points.
  */
-function Progress() {
-  const { index, numQuestions, points, maxPossiblePoints, answer } = useQuiz();
+function Progress({ index, numQuestions, points, maxPossiblePoints, answer }) {
   return (
     <header className="progress">
       <progress max={numQuestions} value={index + Number(answer !== null)} />

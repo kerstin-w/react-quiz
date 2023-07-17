@@ -1,13 +1,10 @@
-import { useQuiz } from "../contexts/QuizContext";
-
 /**
  * The `FinishScreen` function displays the user's score, percentage, highscore, and a button to
  * restart the quiz.
  * @returns JSX elements, including a paragraph displaying the user's score, a paragraph displaying the
  * highscore, and a button to restart the quiz.
  */
-function FinishScreen() {
-  const { dispatch, points, maxPossiblePoints, highscore } = useQuiz();
+function FinishScreen({ dispatch, points, maxPossiblePoints, highscore }) {
   const percentage = (points / maxPossiblePoints) * 100;
 
   let emoji;
